@@ -17,6 +17,7 @@ import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.net.Uri;
+import android.os.Process;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
@@ -28,6 +29,7 @@ import com.android.launcher3.CellLayout;
 import com.android.launcher3.Launcher;
 import com.android.launcher3.R;
 import com.android.launcher3.Utilities;
+import com.android.launcher3.compat.LauncherAppsCompat;
 import com.android.launcher3.dragndrop.DragLayer;
 
 public class HotseatQsbWidget extends AbstractQsbLayout {
@@ -68,7 +70,7 @@ public class HotseatQsbWidget extends AbstractQsbLayout {
 
     private void setColors() {
         View.inflate(new ContextThemeWrapper(getContext(), mIsDefaultLiveWallpaper ? R.style.HotseatQsbTheme_Colored : R.style.HotseatQsbTheme), R.layout.qsb_hotseat_content, this);
-        bz(mIsDefaultLiveWallpaper ? 0xCCFFFFFF : 0x99FAFAFA);
+        bz(getResources().getColor(mIsDefaultLiveWallpaper ? R.color.qsb_background_hotseat_white : R.color.qsb_background_hotseat_default));
     }
 
     private void openQSB() {
@@ -152,6 +154,12 @@ public class HotseatQsbWidget extends AbstractQsbLayout {
                 context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://google.com")));
                 openQSB();
             } catch (ActivityNotFoundException ignored) {
+                try {
+                    getContext().getPackageManager().getPackageInfo(GOOGLE_QSB, 0);
+                    LauncherAppsCompat.getInstance(getContext())
+                            .showAppDetailsForProfile(new ComponentName(GOOGLE_QSB, ".SearchActivity"), Process.myUserHandle());
+                } catch (PackageManager.NameNotFoundException ignored2) {
+                }
             }
         } else {
             openQSB();
