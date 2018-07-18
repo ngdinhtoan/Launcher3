@@ -151,4 +151,12 @@
   <string name="hide_app">Amaga l\'aplicació</string>
     <string name="icon_shape_rounded_square">Quadrat arrodonit</string>
     <string name="smartspace_hours_mins">%1$s %2$s</string>
+    <string name="icon_shape_cylinder">Cilindre</string>
+    <string name="theme_title">Tema</string>
+    <string name="theme_automatic">Automàtic</string>
+    <string name="theme_default">Per defecte</string>
+    <string name="theme_light">Llum</string>
+    <string name="theme_dark">Fosc</string>
+    <string name="theme_transparent">Transparent</string>
+    <string name="pref_open_source_licenses_title">Llicències de programari lliure</string>
 </resources>
