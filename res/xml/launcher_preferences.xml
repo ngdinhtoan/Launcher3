@@ -106,12 +106,21 @@
         </Preference>
 
         <Preference
+            android:key="developer"
+            android:title="@string/about_donate"
+            android:persistent="false">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/app_donate_url" />
+        </Preference>
+
+        <Preference
             android:key="app_info"
             android:title="@string/app_info_drop_target_label"
             android:persistent="false">
             <intent
                 android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
-                android:data="package:com.google.android.apps.nexuslauncher" />
+                android:data="package:amirz.rootless.nexuslauncher" />
         </Preference>
 
         <Preference
