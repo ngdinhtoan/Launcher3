@@ -90,7 +90,7 @@
         launcher:numHotseatIcons="5"
         launcher:iconSize="52.0"
         launcher:iconTextSize="13.0"
-        launcher:defaultLayoutId="@xml/default_workspace_5x5" />
+        launcher:defaultLayoutId="@xml/z2play_workspace_5x5" />
 
     <profile
         launcher:name="Nexus G"
