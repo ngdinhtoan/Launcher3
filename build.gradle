@@ -21,8 +21,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 30814
-        versionName "3.8.1"
+        versionCode 30819
+        versionName "3.8.3"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -34,6 +34,7 @@ android {
     buildTypes {
         debug {
             minifyEnabled false
+            applicationIdSuffix ".debug"
         }
 
         optimized {
