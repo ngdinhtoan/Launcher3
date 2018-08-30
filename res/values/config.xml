@@ -174,4 +174,6 @@
         <item>@string/theme_dark</item>
         <item>@string/theme_transparent</item>
     </string-array>
+
+    <integer name="theme_override">2</integer>
 </resources>

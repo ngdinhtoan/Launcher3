@@ -41,7 +41,7 @@
         android:key="pref_add_icon_to_home"
         android:title="@string/auto_add_shortcuts_label"
         android:summary="@string/auto_add_shortcuts_description"
-        android:defaultValue="true"
+        android:defaultValue="false"
         android:persistent="true"
         />
 
@@ -56,7 +56,7 @@
         android:key="pref_show_predictions"
         android:title="@string/title_app_suggestions"
         android:summary="@string/summary_app_suggestions"
-        android:defaultValue="true"
+        android:defaultValue="false"
         />
 
     <SwitchPreference
@@ -72,7 +72,7 @@
         android:summary="%s"
         android:entries="@array/theme_override_names"
         android:entryValues="@array/theme_override_values"
-        android:defaultValue=""
+        android:defaultValue="@integer/theme_override"
         android:persistent="true" />
 
     <ListPreference
