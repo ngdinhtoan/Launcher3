@@ -16,7 +16,7 @@
 
 <favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
     <!-- Hotseat (We use the screen as the position of the item in the hotseat) -->
-    <!-- Dialer, Messaging, [], Browser, [] -->
+    <!-- Dialer, Messaging, Telegram X, Browser, Google Photos -->
     <resolve
         launcher:container="-101"
         launcher:screen="0"
@@ -39,14 +39,13 @@
         <favorite launcher:uri="mmsto:" />
     </resolve>
 
-    <!--<resolve-->
-        <!--launcher:container="-101"-->
-        <!--launcher:screen="2"-->
-        <!--launcher:x="2"-->
-        <!--launcher:y="0" >-->
-        <!--<favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.APP_MARKET;end" />-->
-        <!--<favorite launcher:uri="market:" />-->
-    <!--</resolve>-->
+    <resolve
+        launcher:container="-101"
+        launcher:screen="2"
+        launcher:x="2"
+        launcher:y="0" >
+        <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=org.thunderdog.challegram;end" />
+    </resolve>
 
     <resolve
         launcher:container="-101"
@@ -58,13 +57,12 @@
         <favorite launcher:uri="http://www.example.com/" />
     </resolve>
 
-    <!--<resolve-->
-        <!--launcher:container="-101"-->
-        <!--launcher:screen="4"-->
-        <!--launcher:x="4"-->
-        <!--launcher:y="0" >-->
-        <!--<favorite launcher:uri="#Intent;action=android.media.action.STILL_IMAGE_CAMERA;end" />-->
-        <!--<favorite launcher:uri="#Intent;action=android.intent.action.CAMERA_BUTTON;end" />-->
-    <!--</resolve>-->
+    <resolve
+        launcher:container="-101"
+        launcher:screen="4"
+        launcher:x="4"
+        launcher:y="0" >
+        <favorite launcher:uri="#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=com.google.android.apps.photos;end" />
+    </resolve>
 
 </favorites>
