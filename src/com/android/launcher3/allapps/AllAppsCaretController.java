@@ -81,7 +81,9 @@ public class AllAppsCaretController {
         } else if (!dragging) {
             // Otherwise, if we're not dragging, match the caret to the appropriate state
             if (containerProgress <= getThreshold()) { // All Apps is up
-                animateCaretToProgress(CaretDrawable.PROGRESS_CARET_POINTING_DOWN);
+                if (mLauncher.useVerticalBarLayout()) {
+                    animateCaretToProgress(CaretDrawable.PROGRESS_CARET_POINTING_DOWN);
+                }
             } else if (containerProgress >= 1 - getThreshold()) { // All Apps is down
                 animateCaretToProgress(CaretDrawable.PROGRESS_CARET_POINTING_UP);
             }
